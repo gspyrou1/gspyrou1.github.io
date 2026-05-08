@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>George Spyrou</title>
+  <meta name="description" content="George Spyrou — Computer Science student and ML researcher at NKUA Athens." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -15,7 +16,7 @@
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="nav-name">George Spyrou</span>
+      <span class="nav-name">George <span>Spyrou</span></span>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
@@ -28,59 +29,76 @@
   <!-- About / Hero -->
   <section id="about">
     <div class="container about-grid">
+
       <div class="about-photo">
-        <img src="assets/img/profile.jpg" alt="George Spyrou" id="profile-img" onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex'" />
-        <div id="photo-fallback" class="photo-fallback">GS</div>
+        <div class="photo-ring">
+          <img src="assets/img/profile.jpg" alt="George Spyrou"
+               onerror="this.outerHTML='<div class=\'photo-fallback\'>GS</div>'" />
+        </div>
       </div>
+
       <div class="about-text">
+        <p class="eyebrow">Computer Science &nbsp;&middot;&nbsp; NKUA &nbsp;&middot;&nbsp; Athens</p>
         <h1>George Spyrou</h1>
-        <p class="subtitle">Computer Science Student &amp; ML Researcher</p>
+        <hr class="hero-rule" />
+        <p class="hero-quote">&ldquo;Interested in the mathematics behind the machine.&rdquo;</p>
         <p class="affiliation">
-          <i class="fas fa-university"></i>
+          <i class="fas fa-graduation-cap"></i>
           BSc Computer Science &mdash; National and Kapodistrian University of Athens
         </p>
         <p class="bio">
-          I am a Computer Science student at the National and Kapodistrian University of Athens (NKUA),
-          with a strong interest in Machine Learning and its mathematical foundations. My work sits at
-          the intersection of rigorous mathematical theory and practical AI applications &mdash; from
-          exploring the formal underpinnings of learning algorithms to building systems that generate
-          high-quality synthetic datasets. I am currently on an academic path toward a Master&rsquo;s
-          degree and, ultimately, doctoral research in the field.
+          I am a Computer Science student at NKUA with a focus on Machine Learning and its
+          mathematical foundations. My work sits at the intersection of rigorous theory and
+          real-world application &mdash; from understanding the formal underpinnings of learning
+          algorithms to building systems that generate high-quality synthetic data. I am on a
+          deliberate academic path toward an MSc and, ultimately, doctoral research in ML.
         </p>
         <div class="social-links">
-          <a href="https://github.com/smurrffy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-          <a href="mailto:giros1357@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/smurrffy" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener" aria-label="Twitter / X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="mailto:giros1357@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Research Interests -->
   <section id="research">
     <div class="container">
-      <h2 class="section-title">Research Interests</h2>
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What I work on</p>
+        <h2 class="section-title">Research Interests</h2>
+      </div>
       <div class="research-grid">
-        <div class="research-card">
+        <div class="research-card reveal" data-delay="1">
           <div class="research-icon"><i class="fas fa-brain"></i></div>
           <h3>Machine Learning</h3>
-          <p>Foundations and algorithms of supervised, unsupervised, and self-supervised learning, with an emphasis on generalization and theoretical guarantees.</p>
+          <p>Foundations and algorithms of supervised, unsupervised, and self-supervised learning, with an emphasis on generalization bounds and theoretical guarantees.</p>
         </div>
-        <div class="research-card">
+        <div class="research-card reveal" data-delay="2">
           <div class="research-icon"><i class="fas fa-square-root-variable"></i></div>
           <h3>Mathematical ML</h3>
-          <p>Applying tools from probability theory, linear algebra, and optimization to rigorously understand and improve learning systems.</p>
+          <p>Applying tools from probability theory, linear algebra, and optimization to rigorously understand and improve learning systems from first principles.</p>
         </div>
-        <div class="research-card">
+        <div class="research-card reveal" data-delay="3">
           <div class="research-icon"><i class="fas fa-database"></i></div>
           <h3>Synthetic Data Generation</h3>
-          <p>Designing generative models and evaluation frameworks that produce realistic, diverse, and privacy-preserving synthetic datasets for downstream tasks.</p>
+          <p>Designing generative models and evaluation frameworks that produce realistic, diverse, and privacy-preserving synthetic datasets for downstream ML tasks.</p>
         </div>
-        <div class="research-card">
+        <div class="research-card reveal" data-delay="4">
           <div class="research-icon"><i class="fas fa-microchip"></i></div>
           <h3>Practical AI Applications</h3>
-          <p>Bridging the gap between research and deployment by building robust, real-world AI systems that solve meaningful problems.</p>
+          <p>Bridging research and deployment by building robust, real-world AI systems &mdash; turning theoretical insights into tools that solve meaningful problems.</p>
         </div>
       </div>
     </div>
@@ -89,11 +107,16 @@
   <!-- Projects -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-sub">Selected work from <a href="https://github.com/smurrffy" target="_blank" rel="noopener">GitHub</a>.</p>
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Open source</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">
+          Selected work from <a href="https://github.com/smurrffy" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+      </div>
       <div id="projects-grid" class="projects-grid">
         <div class="loading-state">
-          <i class="fas fa-circle-notch fa-spin"></i> Loading repositories&hellip;
+          <i class="fas fa-circle-notch fa-spin"></i>&nbsp; Loading repositories&hellip;
         </div>
       </div>
     </div>
@@ -102,28 +125,31 @@
   <!-- Contact -->
   <section id="contact">
     <div class="container contact-inner">
-      <h2 class="section-title">Get in Touch</h2>
-      <p class="contact-text">
+      <div class="section-header reveal" style="text-align:center">
+        <p class="section-eyebrow">Say hello</p>
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
+      <p class="contact-text reveal" data-delay="1">
         I am open to research collaborations, academic discussions, and interesting projects.
         Feel free to reach out through any of the channels below.
       </p>
       <div class="contact-links">
-        <a href="https://github.com/smurrffy" target="_blank" rel="noopener" class="contact-card">
+        <a href="https://github.com/smurrffy" target="_blank" rel="noopener" class="contact-card reveal" data-delay="1">
           <i class="fab fa-github"></i>
           <span>GitHub</span>
           <small>smurrffy</small>
         </a>
-        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" class="contact-card">
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" class="contact-card reveal" data-delay="2">
           <i class="fab fa-linkedin"></i>
           <span>LinkedIn</span>
           <small>George Spyrou</small>
         </a>
-        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener" class="contact-card">
+        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener" class="contact-card reveal" data-delay="3">
           <i class="fab fa-x-twitter"></i>
           <span>Twitter / X</span>
           <small>@YOUR_TWITTER</small>
         </a>
-        <a href="mailto:giros1357@gmail.com" class="contact-card">
+        <a href="mailto:giros1357@gmail.com" class="contact-card reveal" data-delay="4">
           <i class="fas fa-envelope"></i>
           <span>Email</span>
           <small>giros1357@gmail.com</small>
@@ -133,7 +159,7 @@
   </section>
 
   <footer>
-    <p>&copy; <span id="year"></span> George Spyrou &mdash; Built with care.</p>
+    <p>&copy; <span id="year"></span> &nbsp;George Spyrou</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
