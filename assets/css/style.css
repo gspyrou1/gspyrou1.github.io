@@ -404,6 +404,24 @@ section:not(#about) { padding: 88px 0; }
   transform: translate(0, 0);
 }
 
+.project-card--featured {
+  border-color: var(--border-hover);
+  background: linear-gradient(135deg, var(--bg-card) 60%, rgba(167,139,250,0.06));
+}
+
+.project-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--border-hover);
+  border-radius: 4px;
+  padding: 1px 6px;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
 .project-card-header {
   display: flex;
   align-items: center;
