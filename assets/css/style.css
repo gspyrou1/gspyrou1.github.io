@@ -15,8 +15,7 @@
   --accent-glow2: rgba(167, 139, 250, 0.09);
   --radius:       10px;
   --nav-h:        58px;
-  --font-serif:   'Crimson Pro', Georgia, serif;
-  --font-sans:    'Syne', system-ui, sans-serif;
+  --font-sans:    'Outfit', system-ui, sans-serif;
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
@@ -103,7 +102,7 @@ a:hover { color: #c4b0ff; }
 }
 
 .nav-name {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text);
@@ -184,7 +183,7 @@ a:hover { color: #c4b0ff; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--accent);
@@ -201,10 +200,10 @@ a:hover { color: #c4b0ff; }
 }
 
 .about-text h1 {
-  font-family: var(--font-serif);
-  font-size: 3.1rem;
-  font-weight: 600;
-  line-height: 1.08;
+  font-family: var(--font-sans);
+  font-size: 2.9rem;
+  font-weight: 700;
+  line-height: 1.1;
   color: var(--text);
 }
 
@@ -217,12 +216,13 @@ a:hover { color: #c4b0ff; }
 }
 
 .hero-quote {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
-  font-size: 1.22rem;
+  font-weight: 300;
+  font-size: 1.18rem;
   color: #9e98bc;
   margin-bottom: 20px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .affiliation {
@@ -239,10 +239,11 @@ a:hover { color: #c4b0ff; }
 .affiliation i { color: var(--accent); }
 
 .bio {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 300;
   color: #aca8c4;
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 28px;
   max-width: 560px;
 }
@@ -284,7 +285,7 @@ section:not(#about) { padding: 88px 0; }
 }
 
 .section-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 2rem;
   font-weight: 600;
   color: var(--text);
@@ -344,7 +345,7 @@ section:not(#about) { padding: 88px 0; }
 }
 
 .research-card h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.12rem;
   font-weight: 600;
   color: var(--text);
@@ -488,11 +489,16 @@ section:not(#about) { padding: 88px 0; }
 .contact-card span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
 .contact-card small { font-size: 0.73rem; color: var(--muted); }
 
-.contact-card:hover {
+a.contact-card:hover {
   border-color: var(--border-hover);
   box-shadow: 0 4px 22px var(--accent-glow2), 0 0 0 1px var(--border-hover);
   transform: translateY(-2px);
   color: var(--text);
+}
+
+.contact-card--static {
+  cursor: default;
+  opacity: 0.75;
 }
 
 /* ── Footer ───────────────────────────────────────────────── */
