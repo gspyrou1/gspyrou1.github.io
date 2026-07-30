@@ -247,16 +247,6 @@ main section:not(.bio) { padding-top: 54px; }
   margin-bottom: 24px;
 }
 
-.subhead {
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--ink-faint);
-  margin: 30px 0 12px;
-}
-
 .section-foot {
   font-size: 0.86rem;
   color: var(--ink-soft);
@@ -332,29 +322,6 @@ main section:not(.bio) { padding-top: 54px; }
 }
 
 .news-body em { color: var(--ink); font-style: italic; }
-
-/* ── Lists ────────────────────────────────────────────────── */
-.plain-list { list-style: none; }
-
-.plain-list li {
-  position: relative;
-  padding-left: 18px;
-  font-size: 0.92rem;
-  line-height: 1.72;
-  color: var(--ink-soft);
-}
-
-.plain-list li + li { margin-top: 8px; }
-
-.plain-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.72em;
-  width: 5px;
-  height: 1px;
-  background: var(--rule-firm);
-}
 
 /* ── Presentations ────────────────────────────────────────── */
 .pub-list { list-style: none; counter-reset: pub; }
