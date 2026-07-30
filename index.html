@@ -250,6 +250,23 @@
             repetitive columns, and filtered scans about 10× faster on high-cardinality ones.
           </p>
         </li>
+        <li>
+          <div class="entry-head">
+            <span class="entry-title">
+              <a href="https://github.com/gspyrou1/heapfile-external-sort" target="_blank" rel="noopener">heapfile-external-sort</a>
+            </span>
+            <span class="entry-date">C</span>
+          </div>
+          <p class="entry-body">
+            An external merge sort over a heap file built on a block-based buffer manager,
+            for sorting data that does not fit in memory. A sort phase turns the file into
+            sorted runs one chunk at a time, then b-way merge passes combine them, never
+            holding more than one chunk in memory: a 1,280-block file sorts in four passes.
+            A team assignment for a databases course, briefed to be built through ChatGPT —
+            the b-way merge was the one component the model could not get working, and was
+            written by hand.
+          </p>
+        </li>
       </ul>
       <p class="section-foot">
         Further code on <a href="https://github.com/gspyrou1" target="_blank" rel="noopener">GitHub</a>.
