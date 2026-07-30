@@ -1,16 +1,17 @@
-## Hi there 👋
+# gspyrou1.github.io
 
-<!--
-**smurrffy/smurrffy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Personal academic page for George Spyrou — [gspyrou1.github.io](https://gspyrou1.github.io).
 
-Here are some ideas to get you started:
+Static HTML, CSS and a small amount of JavaScript. No build step and no dependencies:
+pushing to `main` deploys via GitHub Pages.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```
+index.html            all page content
+assets/css/style.css  single stylesheet
+assets/js/main.js     footer year + active nav link
+assets/cv.pdf         CV, compiled from cv.tex
+cv.tex                CV source
+```
+
+To preview locally, run `python3 -m http.server` in the repo root and open
+<http://localhost:8000>.

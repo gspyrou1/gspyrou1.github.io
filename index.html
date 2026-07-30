@@ -4,159 +4,279 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>George Spyrou</title>
-  <meta name="description" content="George Spyrou — Computer Science student and ML researcher at NKUA Athens." />
+  <meta name="description" content="George Spyrou — final-year Computer Science student at the National and Kapodistrian University of Athens, working on machine learning and knowledge graph question answering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="nav-name">George <span>Spyrou</span></span>
+      <a href="#top" class="nav-name">George Spyrou</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#news">news</a></li>
+        <li><a href="#research">research</a></li>
+        <li><a href="#publications">presentations</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- About / Hero -->
-  <section id="about">
-    <div class="container about-grid">
+  <main class="container" id="top">
 
-      <div class="about-photo">
-        <div class="photo-ring">
-          <img src="assets/img/profile.jpg" alt="George Spyrou"
-               onerror="this.outerHTML='<div class=\'photo-fallback\'>GS</div>'" />
-        </div>
+    <!-- ── Header ─────────────────────────────────────────── -->
+    <header id="about" class="masthead">
+      <div class="masthead-photo">
+        <!-- github.com/<user>.png redirects to the current avatar, so changing it on
+             GitHub changes it here. Falls back to a local file, then to initials. -->
+        <img src="https://github.com/gspyrou1.png?size=400" alt="George Spyrou"
+             width="400" height="400" fetchpriority="high"
+             data-fallback="assets/img/profile.jpg"
+             onerror="if (this.dataset.fallback) { this.src = this.dataset.fallback; this.dataset.fallback = ''; } else { this.outerHTML = '<div class=\'photo-fallback\' aria-hidden=\'true\'>GS</div>'; }" />
       </div>
 
-      <div class="about-text">
-        <p class="eyebrow">Computer Science &nbsp;&middot;&nbsp; NKUA &nbsp;&middot;&nbsp; Athens</p>
+      <div class="masthead-id">
         <h1>George Spyrou</h1>
-        <hr class="hero-rule" />
-        <p class="hero-quote">&ldquo;Interested in the mathematics behind the machine.&rdquo;</p>
-        <p class="affiliation">
-          <i class="fas fa-graduation-cap"></i>
-          BSc Computer Science @ National and Kapodistrian University of Athens
+        <p class="name-greek" lang="el">Γεώργιος Σπύρου</p>
+        <p class="role">
+          BSc student, Department of Informatics and Telecommunications<br />
+          <a href="https://www.di.uoa.gr/en" target="_blank" rel="noopener">National and Kapodistrian University of Athens</a>
         </p>
-        <p class="bio">
-          I am a Computer Science student at NKUA with a focus on Machine Learning and its
-          mathematical foundations. My work sits at the intersection of rigorous theory and
-          real-world application: from understanding the formal underpinnings of learning
-          algorithms to building systems that generate high-quality synthetic data. <br> 
-          I am currently on the academic path towards an MSc.
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/smurrffy" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener" aria-label="Twitter / X">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-        </div>
+        <ul class="id-links">
+          <li><a href="assets/cv.pdf">CV</a></li>
+          <li><a href="https://github.com/gspyrou1" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/george-spyrou-46729b238/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span class="id-plain">Athens, Greece</span></li>
+        </ul>
       </div>
+    </header>
 
-    </div>
-  </section>
-
-  <!-- Research Interests -->
-  <section id="research">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">What I work on</p>
-        <h2 class="section-title">Research Interests</h2>
-      </div>
-      <div class="research-grid">
-        <div class="research-card reveal" data-delay="1">
-          <div class="research-icon"><i class="fas fa-brain"></i></div>
-          <h3>Machine Learning</h3>
-          <p>Foundations and algorithms of supervised, unsupervised, and self-supervised learning, with an emphasis on generalization bounds and theoretical guarantees.</p>
-        </div>
-        <div class="research-card reveal" data-delay="2">
-          <div class="research-icon"><i class="fas fa-square-root-variable"></i></div>
-          <h3>Mathematical ML</h3>
-          <p>Applying tools from probability theory, linear algebra, and optimization to rigorously understand and improve learning systems from first principles.</p>
-        </div>
-        <div class="research-card reveal" data-delay="3">
-          <div class="research-icon"><i class="fas fa-database"></i></div>
-          <h3>Synthetic Data Generation</h3>
-          <p>Designing models and evaluation frameworks that produce realistic and synthetic datasets for downstream ML tasks, specifically QA-systems on Knowledge Graphs.</p>
-        </div>
-        <div class="research-card reveal" data-delay="4">
-          <div class="research-icon"><i class="fas fa-microchip"></i></div>
-          <h3>Practical AI Applications</h3>
-          <p>Bridging research and deployment by building robust, real-world AI systems. Turning theoretical insights into tools that solve meaningful problems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">Open source</p>
-        <h2 class="section-title">Projects</h2>
-        <p class="section-sub">
-          Selected work from <a href="https://github.com/smurrffy" target="_blank" rel="noopener">GitHub</a>.
-        </p>
-      </div>
-      <div id="projects-grid" class="projects-grid">
-        <div class="loading-state">
-          <i class="fas fa-circle-notch fa-spin"></i>&nbsp; Loading repositories&hellip;
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container contact-inner">
-      <div class="section-header reveal" style="text-align:center">
-        <p class="section-eyebrow">Say hello</p>
-        <h2 class="section-title">Get in Touch</h2>
-      </div>
-      <p class="contact-text reveal" data-delay="1">
-        I am open to research collaborations, academic discussions, and interesting projects.
-        Feel free to reach out through any of the channels below.
+    <section class="bio">
+      <p>
+        I am a final-year Computer Science student at the National and Kapodistrian
+        University of Athens, specializing in Data and Knowledge Management. Since 2024
+        I have worked with the <strong>DIT AI Team</strong> under Prof. Manolis Koubarakis
+        and Sergios Kefalidis, on knowledge graph question answering and on generating the
+        synthetic data such systems are trained and evaluated on.
       </p>
-      <div class="contact-links">
-        <a href="https://github.com/smurrffy" target="_blank" rel="noopener" class="contact-card reveal" data-delay="1">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-          <small>smurrffy</small>
-        </a>
-        <a href="https://www.linkedin.com/in/george-spyrou-46729b238/" target="_blank" rel="noopener" class="contact-card reveal" data-delay="2">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn</span>
-          <small>George Spyrou</small>
-        </a>
-        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener" class="contact-card reveal" data-delay="3">
-          <i class="fab fa-x-twitter"></i>
-          <span>Twitter / X</span>
-          <small>@YOUR_TWITTER</small>
-        </a>
-        <div class="contact-card contact-card--static reveal" data-delay="4">
-          <i class="fas fa-envelope"></i>
-          <span>Email</span>
-          <small>sdi2200168 [at] di [dot] uoa [dot] gr</small>
+      <p>
+        I am interested in the mathematics behind the machine: what learning algorithms
+        actually guarantee, and where those guarantees break down in practice. Alongside my
+        studies I have spent four semesters as a teaching assistant for the introductory
+        programming and data structures labs at NKUA, and I intend to continue into a PhD
+        and a career in research and teaching.
+      </p>
+      <p class="bio-meta">
+        Mainly C, C++ and Python; SPARQL and PyTorch for the research work. Full detail in
+        the <a href="assets/cv.pdf">CV</a>.
+      </p>
+    </section>
+
+    <!-- ── News ───────────────────────────────────────────── -->
+    <section id="news">
+      <h2 class="section-title">News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">Summer 2026</span>
+          <span class="news-body">
+            Program assistant for <em>The Magic of Mathematical Thinking</em> at CTY Greece,
+            Anatolia College — teaching part of the curriculum and running the daily program.
+          </span>
+        </li>
+        <li>
+          <span class="news-date">Mar 2026</span>
+          <span class="news-body">
+            Taught the Video Game Development weekend program at CTY Greece, Anatolia College.
+          </span>
+        </li>
+        <li>
+          <span class="news-date">Dec 2025</span>
+          <span class="news-body">
+            Gave a guest lecture, <em>Debugging Memory Errors with Valgrind</em>, to the full
+            first-year cohort of Introduction to Programming at NKUA.
+          </span>
+        </li>
+        <li>
+          <span class="news-date">2025</span>
+          <span class="news-body">
+            Two co-authored presentations at the 18th European Public Health Conference in
+            Helsinki.
+          </span>
+        </li>
+        <li>
+          <span class="news-date">2024</span>
+          <span class="news-body">
+            Joined the DIT AI Team at NKUA as a pre-graduate research associate.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Research ───────────────────────────────────────── -->
+    <section id="research">
+      <h2 class="section-title">Research</h2>
+
+      <p class="section-lede">
+        My work sits between the theory of learning and the systems built on top of it:
+        machine learning and its mathematical foundations, knowledge graph question
+        answering, and synthetic data generation for training and evaluating those systems.
+      </p>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Undergraduate thesis, DIT AI Team</span>
+          <span class="entry-date">2024 — present</span>
         </div>
+        <p class="entry-sub">
+          Advisors: Prof. Manolis Koubarakis and Sergios Kefalidis (PhD candidate)
+        </p>
+        <p class="entry-body">
+          <em>A Configurable Framework for Generating Synthetic KGQA Benchmarks.</em>
+          A method for producing synthetic datasets to train and evaluate knowledge graph
+          question answering systems. I also assist Sergios Kefalidis on his PhD research
+          into KGQA, mainly on experiments and evaluation.
+        </p>
       </div>
-    </div>
-  </section>
+
+      <h3 class="subhead">In preparation</h3>
+      <ul class="plain-list">
+        <li>
+          Synthetic data generation for knowledge graph question answering, currently being
+          written up with the DIT AI Team at NKUA.
+        </li>
+        <li>
+          An optimizer based on <em>The Information Geometry of Local Generalization
+          Dynamics</em> by Emmanouil M. Athanasakos (NKUA), currently in development.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Presentations ──────────────────────────────────── -->
+    <section id="publications">
+      <h2 class="section-title">Conference presentations</h2>
+      <p class="section-lede">
+        Co-authored peer-reviewed presentations in public mental health, where I handled the
+        statistical analysis and the work on digital systems.
+      </p>
+      <ol class="pub-list">
+        <li>
+          <p class="pub-authors">
+            Skali T., Mouliou M., Mavromichali K., <strong>Spyrou G.</strong>, Katsafadou V.S.
+          </p>
+          <p class="pub-title">
+            Evaluating the Impact of an Arts on Prescription Programme on Psychiatric
+            Patients' Well-Being.
+          </p>
+          <p class="pub-venue">
+            18th European Public Health Conference (EUPHA), Helsinki, 2025
+            <span class="pub-note">· oral presentation, presented by T. Skali</span>
+          </p>
+        </li>
+        <li>
+          <p class="pub-authors">
+            Skali T., Theodoroulakis M., Sapouna V., <strong>Spyrou G.</strong>
+          </p>
+          <p class="pub-title">
+            The 10306 Psychosocial Support Helpline: A Scalable Model for Crisis Response and
+            Brief Psychotherapy.
+          </p>
+          <p class="pub-venue">
+            18th European Public Health Conference (EUPHA), Helsinki, 2025
+            <span class="pub-note">· oral presentation, presented by T. Skali</span>
+          </p>
+        </li>
+        <li>
+          <p class="pub-authors">
+            Sapouna V., <strong>Spyrou G.</strong>
+          </p>
+          <p class="pub-title">
+            The 10306 Psychosocial Support Helpline: The Digital Environment of the Service
+            and the Use of New Technologies and Automated Processes for the Mental Health of
+            Callers and Staff.
+          </p>
+          <p class="pub-venue">
+            33rd Panhellenic Conference of the Hellenic Psychiatric Association
+            <span class="pub-note">· chaired by M. Theodoroulakis</span>
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ── Projects ───────────────────────────────────────── -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <ul class="project-list">
+        <li>
+          <div class="entry-head">
+            <span class="entry-title">Synthetic KGQA benchmark framework</span>
+            <span class="entry-date">in progress</span>
+          </div>
+          <p class="entry-body">
+            The implementation behind my undergraduate thesis: a configurable pipeline that
+            generates question–answer benchmarks over knowledge graphs.
+          </p>
+        </li>
+        <li>
+          <div class="entry-head">
+            <span class="entry-title">
+              <a href="https://github.com/gspyrou1/file-sync-system" target="_blank" rel="noopener">file-sync-system</a>
+            </span>
+            <span class="entry-date">C</span>
+          </div>
+          <p class="entry-body">
+            A Linux file sync daemon: inotify watches, forked workers, a named-pipe CLI and a
+            Bash status script.
+          </p>
+        </li>
+        <li>
+          <div class="entry-head">
+            <span class="entry-title">
+              <a href="https://github.com/gspyrou1/adaptive_compression_implementation" target="_blank" rel="noopener">adaptive_compression_implementation</a>
+            </span>
+            <span class="entry-date">C++</span>
+          </div>
+          <p class="entry-body">
+            An implementation of adaptive data compression, written for coursework.
+          </p>
+        </li>
+      </ul>
+      <p class="section-foot">
+        Further code on <a href="https://github.com/gspyrou1" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────────── -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-lede">
+        I am glad to hear about research collaborations, academic discussions, and
+        interesting problems.
+      </p>
+      <dl class="contact-list">
+        <dt>Email</dt>
+        <dd class="mono">sdi2200168 [at] di [dot] uoa [dot] gr</dd>
+
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/gspyrou1" target="_blank" rel="noopener">gspyrou1</a></dd>
+
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/george-spyrou-46729b238/" target="_blank" rel="noopener">George Spyrou</a></dd>
+
+        <dt>Where</dt>
+        <dd>Athens, Greece</dd>
+      </dl>
+    </section>
+
+  </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> &nbsp;George Spyrou</p>
+    <div class="container">
+      <p>© <span id="year"></span> George Spyrou</p>
+    </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
