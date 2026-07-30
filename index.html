@@ -239,10 +239,15 @@
             <span class="entry-title">
               <a href="https://github.com/gspyrou1/adaptive_compression_implementation" target="_blank" rel="noopener">adaptive_compression_implementation</a>
             </span>
-            <span class="entry-date">C++</span>
+            <span class="entry-date">C++14</span>
           </div>
           <p class="entry-body">
-            An implementation of adaptive data compression, written for coursework.
+            A from-scratch implementation of the adaptive dictionary compression scheme in
+            Foufoulas et al., <em>Adaptive Compression for Fast Scans on String Columns</em>
+            (SIGMOD '21): pages alternate between self-contained and differential
+            dictionaries, so a string column stores like a global dictionary but scans like
+            a local one. Benchmarked against DuckDB over Parquet — up to 45× compression on
+            repetitive columns, and filtered scans about 10× faster on high-cardinality ones.
           </p>
         </li>
       </ul>
