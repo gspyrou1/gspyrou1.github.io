@@ -9,8 +9,7 @@ pushing to `main` deploys via GitHub Pages.
 index.html            all page content
 assets/css/style.css  single stylesheet
 assets/js/main.js     footer year + active nav link
-assets/cv.pdf         CV, compiled from cv.tex
-cv.tex                CV source
+assets/cv.pdf         Public CV exported from the master CV
 ```
 
 To preview locally, run `python3 -m http.server` in the repo root and open
